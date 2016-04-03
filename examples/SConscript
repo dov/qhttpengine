@@ -1,0 +1,6 @@
+Import('env')
+
+env.SConscript(['fileserver/SConscript',
+                'chatserver/SConscript',
+                ],
+               exports='env')

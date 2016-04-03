@@ -1,0 +1,10 @@
+Import('env')
+
+env.Substfile('qhttpengine.h',
+              'qhttpengine.h.in',
+              SUBST_DICT = { '@PROJECT_VERSION@' : env['VERSION']})
+
+env.EnableQt5Modules(['QtNetwork'])
+
+src = Glob('*.cpp') + [env.Moc5(f) for f in Glob('*_p.h')]
+lib = env.SharedLibrary('qhttpengine',src)

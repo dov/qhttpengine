@@ -1,1 +1,12 @@
 /CMakeLists.txt.user
+*.o
+.sconsign.dblite
+moc_*
+/examples/chatserver/chatserver
+/examples/fileserver/fileserver
+*.pyc
+/src/CMakeCache.txt
+CMakeFiles/
+*.so
+*.os
+/src/qhttpengine.h

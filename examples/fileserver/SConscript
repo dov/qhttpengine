@@ -1,0 +1,6 @@
+Import('env')
+
+env.Program('fileserver',
+            ['main.cpp'],
+            LIBPATH=['#/src/']+env.get('LIBPATH',[]),
+            LIBS = ['qhttpengine']+env.get('LIBS',[]))

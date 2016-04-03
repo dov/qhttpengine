@@ -1,0 +1,7 @@
+Import('env')
+
+env.Program('chatserver',
+            ['main.cpp',
+             'apihandler.cpp'],
+            LIBPATH=['#/src/']+env.get('LIBPATH',[]),
+            LIBS = ['qhttpengine']+env.get('LIBS',[]))
